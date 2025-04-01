@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar Lander</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #333; display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;}
+        canvas { border: 1px solid white; background-color: black; }
+        button {
+            margin-top: 15px; padding: 10px 20px; font-size: 16px; cursor: pointer;
+            position: absolute; top: 10px; z-index: 10; /* Ensure buttons are on top */
+        }
+        #readyButton {
+             left: 50%; transform: translateX(-50%); top: 45%; /* Centered */
+             font-size: 24px; padding: 15px 30px;
+        }
+        #restartButton {
+            display: none; /* Hidden initially */
+            left: 50%; transform: translateX(-50%); top: 55%; /* Centered, below ready */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <button id="restartButton">Restart</button>
+
+    <!-- Ensure this matches your JS filename and is AFTER the canvas/buttons -->
+    <script src="moon_lander.js"></script>
+</body>
+</html>
